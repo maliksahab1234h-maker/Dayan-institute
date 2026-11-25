@@ -1,1 +1,351 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dayan Institute | Admissions & School Portal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: #ffffff;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.72)),
+        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1400&q=80")
+          center/cover no-repeat;
+      color: #ffffff;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 680px;
+      margin: 0 auto 26px;
+      color: #e5e7eb;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: #f59e0b;
+      color: #111827;
+      padding: 12px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.2s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background-color: #d97706;
+      transform: translateY(-1px);
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 36px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      border-top: 4px solid #2563eb;
+    }
+
+    .card h3 {
+      color: #1e3a8a;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .admission-box {
+      background: #ffffff;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #374151;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 0.98rem;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+
+    .success-msg {
+      display: none;
+      margin-top: 18px;
+      padding: 14px 18px;
+      background-color: #dcfce7;
+      color: #166534;
+      border-left: 5px solid #16a34a;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 24px 16px;
+      margin-top: 60px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Dayan Institute</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#admission">Admission</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Dayan Institute</h1>
+    <p>Building strong foundations, curiosity, and confidence for every student. Apply online for the upcoming academic session.</p>
+    <a href="#admission" class="btn-primary">Apply for Admission</a>
+  </section>
+
+  <section id="about" class="section">
+    <h2 class="section-title">Why Choose Dayan Institute?</h2>
+    <p class="section-subtitle">Focused learning, caring teachers, and a supportive environment</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Qualified Teachers</h3>
+        <p>Dedicated educators who guide students step-by-step and help them build strong core concepts.</p>
+      </div>
+      <div class="card">
+        <h3>Modern & Practical Learning</h3>
+        <p>Clear explanations, regular practice, and hands-on activities that make studying engaging.</p>
+      </div>
+      <div class="card">
+        <h3>Safe & Disciplined Campus</h3>
+        <p>A welcoming and disciplined space where every child feels encouraged to grow and ask questions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs" class="section">
+    <h2 class="section-title">Classes & Programs</h2>
+    <p class="section-subtitle">Select the level that fits your child's current stage</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Primary Wing</h3>
+        <p>Foundational reading, writing, mathematics, and general awareness for young learners.</p>
+      </div>
+      <div class="card">
+        <h3>Middle Wing</h3>
+        <p>Stronger focus on science, mathematics, languages, and analytical problem-solving.</p>
+      </div>
+      <div class="card">
+        <h3>Secondary / Higher Wing</h3>
+        <p>Structured preparation, test practice, and academic guidance for board and future goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="admission" class="section">
+    <h2 class="section-title">Student Admission Form</h2>
+    <p class="section-subtitle">Fill out the details below to submit an admission inquiry for Dayan Institute</p>
+
+    <div class="admission-box">
+      <form id="admissionForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="studentName">Student Full Name *</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Enter student's name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="parentName">Parent / Guardian Name *</label>
+            <input type="text" id="parentName" name="parentName" placeholder="Enter parent/guardian name" required />
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="phone">Contact Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address (Optional)</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" />
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="dob">Date of Birth *</label>
+            <input type="date" id="dob" name="dob" required />
+          </div>
+
+          <div class="form-group">
+            <label for="classApplying">Class Applying For *</label>
+            <select id="classApplying" name="classApplying" required>
+              <option value="">-- Select Class --</option>
+              <option value="Primary Wing">Primary Wing</option>
+              <option value="Middle Wing">Middle Wing</option>
+              <option value="Secondary Wing">Secondary Wing</option>
+              <option value="Higher Wing">Higher Wing</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="prevSchool">Previous School (if any)</label>
+          <input type="text" id="prevSchool" name="prevSchool" placeholder="Name of previous school" />
+        </div>
+
+        <div class="form-group">
+          <label for="address">Home Address *</label>
+          <textarea id="address" name="address" rows="3" placeholder="Enter complete address" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%;">Submit Admission Form</button>
+
+        <div id="successMessage" class="success-msg"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p><strong>Dayan Institute</strong> — Admissions & Academic Portal</p>
+    <p>For admission queries, contact the school office or submit the online form above.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("admissionForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const studentName = document.getElementById("studentName").value.trim();
+      const classApplying = document.getElementById("classApplying").value;
+      const phone = document.getElementById("phone").value.trim();
+
+      successMessage.style.display = "block";
+      successMessage.innerHTML =
+        "Thank you! Admission request received for <strong>" +
+        studentName +
+        "</strong> (Class: <strong>" +
+        classApplying +
+        "</strong>). We will contact you at <strong>" +
+        phone +
+        "</strong>.";
+
+      form.reset();
+    });
+  </script>
+
+</body>
+  </html>
+          
